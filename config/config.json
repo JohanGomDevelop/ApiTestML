@@ -1,0 +1,20 @@
+{
+  "development": {
+    "name": "Johan Alberto",
+    "lastname": "Gómez Girón",
+    "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
+    "urlGetItem": "https://api.mercadolibre.com/items"
+  },
+  "test": {
+    "name": "Johan Alberto",
+    "lastname": "Gómez Girón",
+    "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
+    "urlGetItem": "https://api.mercadolibre.com/items"
+  },
+  "production": {
+    "name": "Johan Alberto",
+    "lastname": "Gómez Girón",
+    "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
+    "urlGetItem": "https://api.mercadolibre.com/items"
+  }
+}

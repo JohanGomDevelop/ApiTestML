@@ -1,12 +1,25 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
+let route = require('./routes/api');
+app.use('/api', route);
 
-app.get('/', (req, res) => {
-   res.send('Proyecto base');
+app.all("*", (req, res, next) => {
+  let respuesta = {
+      error: true,
+      codigo: 404,
+      mensaje: 'URL no encontrada'
+      };
+      return  res.status(404).send(respuesta);
 });
+
 
 app.listen(port, ()=>{
   console.log("Mi port "+ port);
 })
+
+
+
+
+
