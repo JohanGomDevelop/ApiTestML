@@ -28,7 +28,7 @@ exports.formatCategoryItem = (category) =>{
       text += (element.name + separate );
     }
  }
- return text;
+ return [text];
 }
 
 exports.formatItem = (itemRespose, descriptionResponse) =>{
