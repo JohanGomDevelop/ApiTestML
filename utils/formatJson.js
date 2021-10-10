@@ -15,6 +15,22 @@ function formatCategory(filter){
  return text;
 }
 
+exports.formatCategoryItem = (category) =>{
+  let array = category.path_from_root;
+  let text="";
+  let list =[];
+ if(category.name!==undefined){
+    text=category.name+" : ";
+    let length = array.length >4?4:array.length;
+    for (let index = 0; index < length; index++) {
+      const element = array[index];
+      let separate = (index < length -1)? " | ":"";
+      text += (element.name + separate );
+    }
+ }
+ return text;
+}
+
 exports.formatItem = (itemRespose, descriptionResponse) =>{
   let picture ="";
   if(itemRespose.pictures!=undefined && itemRespose.pictures.length>0){

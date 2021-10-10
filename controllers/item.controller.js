@@ -1,6 +1,6 @@
 const catchAsync = require("../utils/catchAsync");
 const {formatResponse, formatError} = require("../utils/formatResponse");
-const {formatDataSearch, formatItem} = require("../utils/formatJson");
+const {formatDataSearch, formatItem, formatCategoryItem} = require("../utils/formatJson");
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 const fetch = require('node-fetch');
@@ -9,14 +9,18 @@ exports.getItemId = catchAsync(async (req, res) => {
   const { id } = req.params;
   const urlItem = config.urlGetItem + "/" +id;
   const urlDescription = config.urlGetItem + "/" +id+"/description";
-  console.log("urlItem",urlItem);
   var requestOptions = { method: 'GET'};
   let responseItem = await fetch(urlItem, requestOptions);
   let jsonItem =  await responseItem.json();
   if(responseItem.status == 200){
     let responseDescription = await fetch(urlDescription, requestOptions);
     let jsonDescription = await responseDescription.json();
-    return res.status(200).send(formatResponse(formatItem(jsonItem, jsonDescription)));
+    const urlCategory = config.urlCategory + "/" +jsonItem.category_id;
+    let responseCategory = await fetch(urlCategory, requestOptions);
+    let jsonCategory = await responseCategory.json();
+    let data = formatItem(jsonItem, jsonDescription);
+    data["categories"] = formatCategoryItem(jsonCategory);
+    return res.status(200).send(formatResponse(data));
   }else{
     return res.status(404).send(formatError(responseItem.status, jsonItem));
   }

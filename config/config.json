@@ -3,18 +3,24 @@
     "name": "Johan Alberto",
     "lastname": "Gómez Girón",
     "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
-    "urlGetItem": "https://api.mercadolibre.com/items"
+    "urlGetItem": "https://api.mercadolibre.com/items",
+    "urlCategory": "https://api.mercadolibre.com/categories"
+
   },
   "test": {
     "name": "Johan Alberto",
     "lastname": "Gómez Girón",
     "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
-    "urlGetItem": "https://api.mercadolibre.com/items"
+    "urlGetItem": "https://api.mercadolibre.com/items",
+    "urlCategory": "https://api.mercadolibre.com/categories"
+
   },
   "production": {
     "name": "Johan Alberto",
     "lastname": "Gómez Girón",
     "urlSearch": "https://api.mercadolibre.com/sites/MLA/search",
-    "urlGetItem": "https://api.mercadolibre.com/items"
+    "urlGetItem": "https://api.mercadolibre.com/items",
+    "urlCategory": "https://api.mercadolibre.com/categories"
+
   }
 }
