@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "d9ecebeb-b148-415a-abe1-8fc443e34654",
+		"name": "Api Test ML",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/item/MLA918007870",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"item",
+						"MLA918007870"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/items?q=guitarra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"items"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "guitarra"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

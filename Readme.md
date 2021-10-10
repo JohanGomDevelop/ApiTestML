@@ -1,5 +1,5 @@
 # Api Test express ML
-El proyecto impelenta dos endpoint conectados a la api de 
+El proyecto implenta dos endpoint conectados a la api suminitrada por Mercado Libre 
 - /api/items?q=​:query
 - /api/item/:id
 Se ajusto el la url del endpoint 2 ya que el verbo items se repetia,
