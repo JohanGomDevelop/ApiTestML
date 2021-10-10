@@ -12,7 +12,7 @@ Ejecuta los comandos
 
 El proyecto corre en el puerto 3000 por defecto.
 
-## Configuracion pde entorno de desarrollo
+## Configuracion de entorno de desarrollo
 Como base del proyecto se instalan los paquetes:  
 - nodemon 
 - express
