@@ -65,8 +65,7 @@ function formatDataSearch(jsonResult){
   for (let element of filters) {
     categories.push(formatCategory(element));
   }
-
-  return {items, categories}
+  return {categories, items };
 }
 
 exports.getItemId = catchAsync(async (req, res) => {

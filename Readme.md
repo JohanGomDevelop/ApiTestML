@@ -1,20 +1,24 @@
+# Api Test express ML
+El proyecto impelenta dos endpoint conectados a la api de 
+- /api/items?q=​:query
+- /api/item/:id
+Se ajusto el la url del endpoint 2 ya que el verbo items se repetia,
+y la api no enrutaba adecuadamente.
 
-Api Test express
+## ¿Como correr el proyecto?
+Ejecuta los comandos
+- npm install
+- npm run dev
 
+El proyecto corre en el puerto 3000 por defecto.
 
-Como correr el proyecto
-
-npm install
-npm run dev
-
-
-Configuracion pde entorno de desarrollo
- nodemon 
- eslint 
- eslint-config-prettier 
- eslint-plugin-prettier 
- pritter -D
- plugin visual estudio editor config
-
-
-
+## Configuracion pde entorno de desarrollo
+Como base del proyecto se instalan los paquetes:  
+- nodemon 
+- express
+- node-fetch
+- eslint 
+- eslint-config-prettier 
+- eslint-plugin-prettier 
+- pritter
+- plugin visual estudio editor config
